@@ -1,30 +1,33 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:habot_lsa_verification/main.dart';
+import 'package:habot_lsa_verification/screens/lsa_profile_verification_screen.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+  testWidgets('LSA Verification Screen loads properly', (WidgetTester tester) async {
+    // Render the screen wrapped in a MaterialApp
+    await tester.pumpWidget(
+      const MaterialApp(
+        home: LsaProfileVerificationScreen(),
+      ),
+    );
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    // Verify key UI elements exist
+    expect(find.text('SUBMIT VERIFICATION'), findsOneWidget);
+    expect(find.text('Full Name'), findsOneWidget);
+  });
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
+  testWidgets('Fail-closed security triggers on empty submission', (WidgetTester tester) async {
+    await tester.pumpWidget(
+      const MaterialApp(
+        home: LsaProfileVerificationScreen(),
+      ),
+    );
+
+    // Tap submit button with empty fields
+    await tester.tap(find.text('SUBMIT VERIFICATION'));
     await tester.pump();
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    // Verify fail-closed error state triggers
+    expect(find.textContaining('FAIL-CLOSED'), findsOneWidget);
   });
 }
