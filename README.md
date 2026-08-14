@@ -35,6 +35,15 @@ Prerequisites
 -> Dart SDK (>=3.0.0)
 -> Android Studio / VS Code with Flutter extension
 
+Getting Started
+1. Clone the Repository
+git clone [https://github.com/sonyvishwakarma/LSA-Profile-Verification.git](https://github.com/sonyvishwakarma/LSA-Profile-Verification.git)
+cd LSA-Profile-Verification
+2. Install Dependencies
+flutter pub get
+3. Run the application
+flutter run
+
 ## How to Test (Demo Walkthrough)
 To verify all system features during testing or video demonstration:
 
@@ -58,6 +67,10 @@ Test Case 3: UI Friction Detection (Hesitation Event)
 >>> Result: Orange status box displaying LOG [UI Friction Event]: User hesitation detected (>5s stall).
 
 ## Dependencies Used:
-- crypto: For generating SHA-256 logic_hash strings.
-- uuid: For generating dynamic trace_id request headers.
-- http: For structured network requests and metadata injection.
+crypto: For generating SHA-256 logic_hash cryptographic signatures.
+uuid: For generating dynamic, unique trace_id headers per transaction.
+http: For structured REST API networking and custom header injection.
+flutter_test: For unit and widget testing verifying fail-closed functionality.
+
+## Author
+Developed as part of the Digivir Developer Assessment.
