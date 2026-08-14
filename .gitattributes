@@ -1,6 +1,12 @@
-# Ignore heavy desktop boilerplate and web files
-windows/* linguist-vendored
-linux/* linguist-vendored
-web/* linguist-vendored
+# Ignore generated platform directories
+android/** linguist-vendored
+ios/** linguist-vendored
+windows/** linguist-vendored
+linux/** linguist-vendored
+macos/** linguist-vendored
+web/** linguist-vendored
+
+# Explicitly ignore CMake, HTML, and build scripts
 *.cmake linguist-vendored
 CMakeLists.txt linguist-vendored
+*.html linguist-vendored
