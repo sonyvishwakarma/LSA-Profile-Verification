@@ -3,7 +3,7 @@
 A Flutter mobile application component built for the Digivir Developer Assessment. This application enforces strict data lineage, fail-closed security logic, UI friction tracking, and cryptographic header injection before submitting verification requests.
 
 
-## 📸 Demo Screenshots & Features
+##  Demo Screenshots & Features
 
 | Feature              | Description                                                         | State             |
 | Valid Verification   | All required lineage parameters present. Metadata headers injected. | 🟢 200 SUCCESS    |
