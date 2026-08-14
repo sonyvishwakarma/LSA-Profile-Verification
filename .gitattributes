@@ -1,6 +1,10 @@
-# Ignore native generated folders for GitHub language statistics
+# Force Linguist to treat native wrapper folders as vendored/generated
 android/* linguist-vendored
 ios/* linguist-vendored
 windows/* linguist-vendored
 linux/* linguist-vendored
 macos/* linguist-vendored
+
+*.cpp linguist-vendored
+*.h linguist-vendored
+*.cc linguist-vendored
