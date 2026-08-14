@@ -6,9 +6,9 @@ A Flutter mobile application component built for the Digivir Developer Assessmen
 ##  Demo Screenshots & Features
 
 | Feature              | Description                                                         | State             |
-| Valid Verification   | All required lineage parameters present. Metadata headers injected. | 🟢 200 SUCCESS    |
+| Valid Verification   | All required lineage parameters present. Metadata headers injected. | 🟢 200 SUCCESS   |
 | Fail-Closed Gate     | Missing `predecessor_id` halts execution before network request.    | 🔴 SECURITY HALT |
-| UI Friction Tracking | Monitored field detects typing hesitation exceeding 5 seconds.      | 🟠 UI WARNING     |
+| UI Friction Tracking | Monitored field detects typing hesitation exceeding 5 seconds.      | 🟠 UI WARNING    |
 
 
 ##  Architecture & Component Design
