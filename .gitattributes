@@ -1,6 +1,10 @@
-# Ignore heavy desktop boilerplate and web files
+# Force Linguist to treat native wrapper folders as vendored/generated
+android/* linguist-vendored
+ios/* linguist-vendored
 windows/* linguist-vendored
 linux/* linguist-vendored
-web/* linguist-vendored
-*.cmake linguist-vendored
-CMakeLists.txt linguist-vendored
+macos/* linguist-vendored
+
+*.cpp linguist-vendored
+*.h linguist-vendored
+*.cc linguist-vendored
